@@ -1,0 +1,6 @@
+# Redirect for monacodelisa.com to monacodelisa.dev
+[[redirects]]
+  from = "https://monacodelisa.com/*"
+  to = "https://monacodelisa.dev/:splat"
+  status = 301
+  force = true
