@@ -6,72 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notice: MonaCodeLisa Retired</title>
     <style>
+      @font-face {
+        font-family: 'Papyrus';
+        src: local('Papyrus'), url('https://fonts.cdnfonts.com/s/12181/Papyrus.woff') format('woff');
+      }
+
       body {
         font-family: Arial, sans-serif;
         text-align: center;
         margin: 0;
         padding: 0;
-        background-color: #222;
-        color: #e6e6e6;
+        background-color: #222222;
+        color: #c9c9c9;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow: hidden;
+      }
+
+      .papyrus {
+        font-family: 'Papyrus', sans-serif;
+        font-size: 1.5rem;
       }
 
       .card {
-        max-width: 600px;
-        padding: 20px;
-        background-color: #333;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px #0000001a;
-      }
-
-      .card:hover {
-        box-shadow: 0 8px 16px #00000033;
+        max-width: 35rem;
+        padding: 1.25rem 2rem;
+        background-color: #333333;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem #0000001a;
+        transform: perspective(62.5rem) rotateX(0) rotateY(0);
+        transition: transform 0.1s ease-out;
       }
 
       a {
-        color: #007BFF;
+        color: #517db0;
         text-decoration: none;
       }
 
       a:hover {
-        text-decoration: underline;
+        color: #3375c0;
       }
 
       h1 {
-        font-size: 24px;
-        margin-bottom: 16px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       p {
-        margin-bottom: 12px;
+        margin-bottom: 0.75rem;
+      }
+
+      p a {
+        font-size: 1.2rem;
       }
 
       .footer {
-        margin-top: 20px;
-        font-size: 14px;
-        color: #777;
+        margin-top: 1.25rem;
+        font-size: 0.875rem;
+        color: #888;
+      }
+
+      @media (orientation: portrait) {
+        .card {
+          max-width: 80vw;
+        }
       }
     </style>
+    <script>
+      document.addEventListener("mousemove",(e) => {
+        const card = document.querySelector(".card");
+        const { clientX,clientY } = e;
+        const { innerWidth,innerHeight } = window;
+
+        const rotateX = ((clientY / innerHeight) - 0.5) * -10; // Vertical tilt
+        const rotateY = ((clientX / innerWidth) - 0.5) * 10;  // Horizontal tilt
+
+        card.style.transform = `perspective(62.5rem) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+    </script>
   </head>
 
   <body>
     <div class="card">
-      <h1>MonaCodeLisa Has Been Retired</h1>
-      <p>I have officially retired the username <strong>MonaCodeLisa</strong> and transitioned to a new identity:</p>
-      <p><a href="https://esthersoftware.dev" target="_blank">EstherSoftwareDev</a></p>
+      <h1><span class="papyrus">MonaCodeLisa</span> Has Been Retired</h1>
+      <p>I have officially retired the username MonaCodeLisa and transitioned to a new identity:</p>
+      <p><a href="https://esthersoftware.dev" target="_blank"><span class="papyrus">EstherSoftware.Dev</span></a></p>
       <p>This change reflects my updated online presence and branding. For more details, visit my new domain:</p>
       <p><a href="https://esthersoftware.dev" target="_blank">https://esthersoftware.dev</a></p>
       <p>Let this also be the end of addressing me as <code>Mona</code>, which was never part of my name but a fragment
         of my old username.</p>
       <p>Thank you for your understanding and support as I move forward with this change!</p>
       <div class="footer">
-        Best regards,<br>
-        Esther White
+        <p>Best regards, Esther White</p>
       </div>
     </div>
   </body>
 
 </html>
+
