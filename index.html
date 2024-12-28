@@ -2,6 +2,21 @@
 <html lang="en">
 
   <head>
+    <script>
+      // Redirect for any path on monacodelisa.dev to the root domain
+      if (window.location.hostname === 'monacodelisa.dev' && window.location.pathname !== '/') {
+        window.location.replace('https://monacodelisa.dev');
+      }
+
+      // Redirect for blog.monacodelisa.com to blog.esthersoftware.dev
+      if (window.location.hostname === 'blog.monacodelisa.com') {
+        const newPath = window.location.pathname;
+        window.location.replace(`https://blog.esthersoftware.dev${newPath}`);
+      }
+      if (window.location.pathname !== '/') {
+        window.location.replace('https://monacodelisa.dev');
+      }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -72,7 +87,8 @@
 
       code {
         background-color: #2b2b2b;
-        font-size: 1rem;;
+        font-size: 1rem;
+        ;
         padding: 0 0.4rem 0.1rem;
         border-radius: 0.3rem;
       }
@@ -117,15 +133,24 @@
       <h1>I've retired <span class="papyrus">MonaCodeLisa</span></h1>
       <p>I have officially retired the MonaCodeLisa username & domains and transitioned to:</p>
       <h1><a href="https://esthersoftware.dev" target="_blank"><span class="papyrus">EstherSoftwareDev</span></a></h1>
-      <p>The only reason I am keeping this domain active is that there are still links on Google and elsewhere that may lead here. Since I made the change without an official announcement, I wanted to provide at least one point of reference. This way, people who end up here won't encounter non-working domains and wonder what happened.</p>
+      <p>The only reason I am keeping this domain active is that there are still links on Google and elsewhere that may
+        lead here. Since I made the change without an official announcement, I wanted to provide at least one point of
+        reference. This way, people who end up here won't encounter non-working domains and wonder what happened.</p>
       <h3>What's Changed?</h3>
       <ul>
-        <li><strong>Old Domains</strong>: <code>monacodelisa.com</code> & <code>monacodelisa.dev</code> are no longer in use by me.</li>
-        <li><strong>New Domains:</strong> <a href="https://esthersoftware.dev" target="_blank" rel="noopener">esthersoftware.dev</a> & estherwhite.dev are domains that I am going to be using.</li>
-        <li><strong>Online Handles:</strong> Every handle online has been updated to reflect my new username, <code>EstherSoftwareDev</code>. In cases where there's a 15-character limit, I use <code>EstherWhiteDev</code>.</li>
-        <li><strong>Email Address:</strong>My email has also changed to match the new branding. Please check the <a href="https://esthersoftware.dev" target="_blank" rel="noopener">new domain</a> for updated contact details.</li>
+        <li><strong>Old Domains</strong>: <code>monacodelisa.com</code> & <code>monacodelisa.dev</code> are no longer in
+          use by me.</li>
+        <li><strong>New Domains:</strong> <a href="https://esthersoftware.dev" target="_blank"
+            rel="noopener">esthersoftware.dev</a> & estherwhite.dev are domains that I am going to be using.</li>
+        <li><strong>Online Handles:</strong> Every handle online has been updated to reflect my new username,
+          <code>EstherSoftwareDev</code>. In cases where there's a 15-character limit, I use
+          <code>EstherWhiteDev</code>.</li>
+        <li><strong>Email Address:</strong>My email has also changed to match the new branding. Please check the <a
+            href="https://esthersoftware.dev" target="_blank" rel="noopener">new domain</a> for updated contact details.
+        </li>
       </ul>
-      <p>Let this mark the end of anyone addressing me as <code>`Mona`</code>. It was never part of my name - it was simply a fragment of my old username.</p>
+      <p>Let this mark the end of anyone addressing me as <code>`Mona`</code>. It was never part of my name - it was
+        simply a fragment of my old username.</p>
       <p>I hope this clears up any confusion moving forward.</p>
       <p>Thank you for your understanding and support as I embrace this new chapter!</p>
       <div class="footer">
@@ -136,4 +161,3 @@
   </body>
 
 </html>
-
