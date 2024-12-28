@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "https://monacodelisa.dev"
   status = 301
   force = true
 
