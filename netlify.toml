@@ -1,3 +1,7 @@
+[build]
+  base = ""
+  command = "npm run build"
+  publish = "dist/browser"
 
 # Redirect for monacodelisa.com to monacodelisa.dev
 [[redirects]]
@@ -5,3 +9,9 @@
   to = "https://monacodelisa.dev/:splat"
   status = 301
   force = true
+
+# SPA Redirect Rule
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
