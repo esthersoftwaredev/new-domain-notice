@@ -4,17 +4,16 @@
   <head>
     <script>
       // Redirect for any path on monacodelisa.dev to the root domain
-      if (window.location.hostname === 'monacodelisa.dev' && window.location.pathname !== '/') {
-        window.location.replace('https://monacodelisa.dev');
+      if (window.location.hostname === 'monacodelisa.com' || window.location.hostname === 'monacodelisa.dev') {
+        if (window.location.pathname !== '/') {
+          window.location.replace('https://monacodelisa.dev');
+        }
       }
 
       // Redirect for blog.monacodelisa.com to blog.esthersoftware.dev
       if (window.location.hostname === 'blog.monacodelisa.com') {
         const newPath = window.location.pathname;
         window.location.replace(`https://blog.esthersoftware.dev${newPath}`);
-      }
-      if (window.location.pathname !== '/') {
-        window.location.replace('https://monacodelisa.dev');
       }
     </script>
     <meta charset="UTF-8">
@@ -144,7 +143,8 @@
             rel="noopener">esthersoftware.dev</a> & estherwhite.dev are domains that I am going to be using.</li>
         <li><strong>Online Handles:</strong> Every handle online has been updated to reflect my new username,
           <code>EstherSoftwareDev</code>. In cases where there's a 15-character limit, I use
-          <code>EstherWhiteDev</code>.</li>
+          <code>EstherWhiteDev</code>.
+        </li>
         <li><strong>Email Address:</strong>My email has also changed to match the new branding. Please check the <a
             href="https://esthersoftware.dev" target="_blank" rel="noopener">new domain</a> for updated contact details.
         </li>
