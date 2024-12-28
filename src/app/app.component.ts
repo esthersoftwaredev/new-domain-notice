@@ -9,25 +9,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    this.handleRedirects();
-  }
-
-  private handleRedirects(): void {
-    const hostname = window.location.hostname;
-    const pathname = window.location.pathname;
-
-    // Redirect for any path on monacodelisa.com or monacodelisa.dev to the root domain
-    if (hostname === 'monacodelisa.com' || hostname === 'monacodelisa.dev') {
-      if (pathname !== '/') {
-        window.location.replace('https://monacodelisa.dev');
-      }
-    }
-
-    // Redirect for blog.monacodelisa.com to blog.esthersoftware.dev
-    if (hostname === 'blog.monacodelisa.com') {
-      const newPath = pathname || '/';
-      window.location.replace(`https://blog.esthersoftware.dev${newPath}`);
-    }
   }
 
   @HostListener('document:mousemove', ['$event'])

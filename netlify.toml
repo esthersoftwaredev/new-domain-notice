@@ -10,10 +10,10 @@
   status = 301
   force = true
 
-# Redirect for blog.monacodelisa.com to blog.esthersoftware.dev/:splat
+# Redirect for blog.monacodelisa.com to monacodelisa.dev
 [[redirects]]
   from = "https://blog.monacodelisa.com/*"
-  to = "https://blog.esthersoftware.dev/:splat"
+  to = "https://monacodelisa.dev/:splat"
   status = 301
   force = true
 
