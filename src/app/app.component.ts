@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
     // Redirect for blog.monacodelisa.com to blog.esthersoftware.dev
     if (hostname === 'blog.monacodelisa.com') {
-      const newPath = pathname;
+      const newPath = pathname || '/';
       window.location.replace(`https://blog.esthersoftware.dev${newPath}`);
     }
   }

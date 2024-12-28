@@ -10,6 +10,13 @@
   status = 301
   force = true
 
+# Redirect for blog.monacodelisa.com to blog.esthersoftware.dev/:splat
+[[redirects]]
+  from = "https://blog.monacodelisa.com/*"
+  to = "https://blog.esthersoftware.dev/:splat"
+  status = 301
+  force = true
+
 # SPA Redirect Rule
 [[redirects]]
   from = "/*"
