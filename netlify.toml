@@ -1,17 +1,7 @@
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
 
+# Redirect for monacodelisa.com to monacodelisa.dev
 [[redirects]]
   from = "https://monacodelisa.com/*"
   to = "https://monacodelisa.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://blog.monacodelisa.com/*"
-  to = "https://blog.esthersoftware.dev/:splat"
   status = 301
   force = true
